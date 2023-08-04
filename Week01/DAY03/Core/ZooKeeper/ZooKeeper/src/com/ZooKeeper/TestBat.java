@@ -6,8 +6,8 @@ public class TestBat {
 		Bat khoffech = new Bat();
 		khoffech.displayEnergyLevel();
 		khoffech.attackTown();
-		khoffech.attackTown();
-		khoffech.attackTown();
+//		khoffech.attackTown();
+//		khoffech.attackTown();
 		khoffech.eatHumans();
 		khoffech.eatHumans();
 		khoffech.fly();
