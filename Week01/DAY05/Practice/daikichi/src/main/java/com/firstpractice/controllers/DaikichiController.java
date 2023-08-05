@@ -1,15 +1,32 @@
 package com.firstpractice.controllers;
 
+import java.util.Iterator;
+
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DaikichiController {
 	
+	//Hello Human Practice Assignment
 	@RequestMapping("/")
-	public String home() {
-		return "Hello";
+	public String home(@RequestParam(value="name", required=false) String name,
+						@RequestParam(value="last_name", required=false) String last_name,
+						 @RequestParam(value="time", required=false) int time) {
+		
+		String msg = "";
+		if (time>0) {
+			for (int i = 1	; i<=time ; i++) {
+				msg += name + " " + last_name + " ";
+			}			
+		}
+		if (name == null & last_name == null) {
+			return "Hello Human";
+		}
+		return "Hello "+ msg;
 	}
+	
 	
 	@RequestMapping("/daikichi")
 	public String daiki() {
