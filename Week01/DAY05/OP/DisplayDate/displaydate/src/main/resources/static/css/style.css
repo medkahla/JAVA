@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;	
+}
+h1{
+	color: darkgrey;
+}
+h2{
+	color: blue;
+}
