@@ -1,4 +1,3 @@
-package com.ZooKeeper;
 import java.io.File;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -21,7 +20,7 @@ public class Bat extends Mammal {
 	
 	public void attackTown() {
 		this.setEnergyLevel(this.getEnergyLevel()-100);
-		String filepath = "battlefield.wav";
+		String filepath = "battle.wav";
 		PlayMusic(filepath);
 		JOptionPane.showMessageDialog(null, "Stop Playing");
 	}

@@ -1,4 +1,3 @@
-package com.ZooKeeper;
 
 public class TestGorilla {
 
