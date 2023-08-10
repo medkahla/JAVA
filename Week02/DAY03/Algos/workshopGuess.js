@@ -29,7 +29,7 @@ function getGuessFromPlayer(players, round, playerIndex, callback){
         }else{
             console.log(`Player ${players[playerIndex]} guessed ${number}`);
             console.log(server.checkGuess(number));
-            getGuessFromPlayer(players, round, playerIndex + 1, callback)
+            getGuessFromPlayer(players, round, (playerIndex == players.length -1? playerIndex=0: playerIndex + 1), callback)
         }
     })
 }
