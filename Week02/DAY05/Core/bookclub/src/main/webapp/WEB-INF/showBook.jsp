@@ -36,8 +36,10 @@
 			<c:if test="${user_id != book.poster.id }"><span class="text-secondary"><c:out value="${book.poster.userName }"/>'s</span></c:if> 
 		thoughts:
 		</h5>
-		<div class="card sm">
-			<c:out value="${book.thoughts }" />
+		<div class="card">
+			<div class="card-body">
+				<c:out value="${book.thoughts }" />
+			</div>
 		</div>
 		<c:if test="${user_id == book.poster.id }">
 		<br>
