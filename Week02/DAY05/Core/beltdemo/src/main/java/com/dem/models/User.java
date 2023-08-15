@@ -1,4 +1,4 @@
-package com.bookclub.models;
+package com.dem.models;
 
 import java.util.Date;
 import java.util.List;
@@ -45,9 +45,9 @@ public class User {
     @Size(min=8, max=128, message="Confirm Password must be between 8 and 128 characters")
     private String confirm;
     
-    //1:M
-    @OneToMany(mappedBy="poster", fetch = FetchType.LAZY)
-    private List<Book> books;
+    // 1:M
+    @OneToMany(mappedBy="driver", fetch = FetchType.LAZY)
+    private List <Car> carList;
     
     @Column(updatable=false)
     @DateTimeFormat(pattern="yyyy-MM-dd")
@@ -107,11 +107,11 @@ public class User {
 	public void setConfirm(String confirm) {
 		this.confirm = confirm;
 	}
-	public List<Book> getBooks() {
-		return books;
+	public List<Car> getCarList() {
+		return carList;
 	}
-	public void setBooks(List<Book> books) {
-		this.books = books;
+	public void setCarList(List<Car> carList) {
+		this.carList = carList;
 	}
 	public Date getCreatedAt() {
 		return createdAt;
